@@ -1,6 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as firebase from "firebase/app";
+import firebaseConfig from "./firebase.config";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+firebase.initializeApp(firebaseConfig);
+
+ReactDOM.render(<App />, document.getElementById("root"));
